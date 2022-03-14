@@ -26,6 +26,6 @@ DEFAULT_LANG = 'en'
 #           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = False
-THEME = 'simple'
+#THEME = 'simple'
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

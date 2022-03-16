@@ -22,4 +22,4 @@ Status: draft
 | [rhub/r-minimal](https://github.com/r-hub/r-minimal) | Alpine linux-based R instance, small image size |
 | [rocker/r-base](https://hub.docker.com/r/rocker/r-base/) | R instance, usually bleeding edge when it comes to system dependencies |
 | [rocker/r-ubuntu](https://hub.docker.com/r/rocker/r-ubuntu) | Long-term support for ubuntu |
-| [rocker/r-base](https://hub.docker.com/r/rstudio/r-base) | Long-term support for ubuntu |
+| [rocker/tidyverse](https://hub.docker.com/r/rocker/tidyverse) | r-base with tidyverse |

@@ -37,3 +37,5 @@ Status: published
     * [pyarrow](https://arrow.apache.org/docs/python/install.html)
 * Visualization
     * [matplotlib](https://matplotlib.org/)
+    * [plotly](https://github.com/plotly/plotly.py)
+    * [seaborn](https://seaborn.pydata.org/)

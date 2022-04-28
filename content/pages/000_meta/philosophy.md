@@ -5,8 +5,8 @@ Slug: philosophy
 Summary: Philosopy
 Status: published
 
-* needs work*
+We create and maintain coding conventions to ensure successful collaboration. We want to work together on these conventions in a deliberate way, repeatedly discussing, writing, and reviewing this evolving document.
 
-*TODO: we should explain why we need coding conventions. Why are we bothering about this? I keep thinking in metaphors like, for coders this is how we live. It is like what you prefer to do in your own house. It really matters to some people where you put the milk in the refrigerator, or whether the utensils are put in the dishwasher pointy-side up or down.*
+For coders, the code is part of how we live - it’s similar to how you organize your residence. To some people, it really matters that forks face handle-up in the dishwasher, or that the toilet paper hangs over the roll. These are the conventions and the optional but recommended preferences. But, other things are best practices -- you really should change those batteries in your fire alarm once per year. Then there are the required, like having to pay utilities.
 
-*Alternately, some of the conventions are ways to make your work go more smoothly, or are forms of etiquette that help in collaboration.*
+Coding conventions add predictability, uniformity, and proven standards to the way we write code, which allows us to work more efficiently. This handbook documents these conventions and suggests practical tips.

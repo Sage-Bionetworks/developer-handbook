@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>Sage Bionetworks Developer Handbook - Categories</title>
+        <title>Branch Protection</title>
         <link rel="stylesheet" href="https://sage-bionetworks.github.io/developer-handbook/theme/css/main.css" />
         <link href="https://sage-bionetworks.github.io/developer-handbook/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Sage Bionetworks Developer Handbook Atom Feed" />
 </head>
@@ -13,7 +13,7 @@
         <header id="banner" class="body">
                 <h1><a href="https://sage-bionetworks.github.io/developer-handbook/">Sage Bionetworks Developer Handbook</a></h1>
                 <nav><ul>
-                    <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/branch-protection.html">Branch Protection</a></li>
+                    <li class="active"><a href="https://sage-bionetworks.github.io/developer-handbook/pages/branch-protection.html">Branch Protection</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/cicd.html">CICD</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/code-review.html">Code Review</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/development-workflow.html">Development Workflow</a></li>
@@ -31,13 +31,17 @@
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/testing.html">Testing</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-
 <section id="content" class="body">
-    <h1>Categories for Sage Bionetworks Developer Handbook</h1>
-    <ul>
-    </ul>
+    <h1 class="entry-title">Branch Protection</h1>
+    
+    <p>Branch protection is a tool for encouraging the desired behavior from contributors. This is accomplished by setting up a rule requiring a pull request before merging. The default setting will allow admins to override this requirement, which is useful if you need to perform an emergency merge to fix a problem.</p>
+<p>To set up branch protection, go to Settings &gt; Branches and create a branch protection rule for your default branch (usually “main” or “master”). For example, a common pattern is to set up a branch protection rule for main that:</p>
+<ol>
+<li>Requires a pull request before merging</li>
+<li>Requires at least one approval</li>
+<li>Requires an approved review by Code Owners</li>
+</ol>
 </section>
-
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>

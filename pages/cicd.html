@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>Sage Bionetworks Developer Handbook - Categories</title>
+        <title>CICD</title>
         <link rel="stylesheet" href="https://sage-bionetworks.github.io/developer-handbook/theme/css/main.css" />
         <link href="https://sage-bionetworks.github.io/developer-handbook/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Sage Bionetworks Developer Handbook Atom Feed" />
 </head>
@@ -14,7 +14,7 @@
                 <h1><a href="https://sage-bionetworks.github.io/developer-handbook/">Sage Bionetworks Developer Handbook</a></h1>
                 <nav><ul>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/branch-protection.html">Branch Protection</a></li>
-                    <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/cicd.html">CICD</a></li>
+                    <li class="active"><a href="https://sage-bionetworks.github.io/developer-handbook/pages/cicd.html">CICD</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/code-review.html">Code Review</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/development-workflow.html">Development Workflow</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/feature-branches.html">Feature Branches</a></li>
@@ -31,13 +31,33 @@
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/testing.html">Testing</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-
 <section id="content" class="body">
-    <h1>Categories for Sage Bionetworks Developer Handbook</h1>
-    <ul>
-    </ul>
+    <h1 class="entry-title">CICD</h1>
+    
+    <p>CICD stands for Continuous Integration, Continuous Deployment. It is the set of practices that aim to bridge the gap between development and operation activities. These practices are aided by tools that assist with building, testing, containerization, and measuring certain code metrics. Although these tools are important, CICD practices are dependent on developer mindset and the alignment between engineering teams, IT teams, and operation teams.</p>
+<h2>A Typical CICD Workflow</h2>
+<p><em>TODO: define these</em>
+1. Linting
+1. Building
+1. Testing
+1. Code Coverage Report
+1. Deployment</p>
+<h2>Tools</h2>
+<ol>
+<li><a href="https://docs.github.com/en/actions">Github Actions</a><ul>
+<li><a href="https://github.com/Sage-Bionetworks-IT/ci-examples">ci-examples</a> repository</li>
+</ul>
+</li>
+<li>Travis CI</li>
+<li>Other tools not commonly used at Sage<ul>
+<li>Gitlab CI/CD</li>
+<li>Bitbucket pipelines</li>
+<li>Circleci</li>
+<li>Jenkins</li>
+</ul>
+</li>
+</ol>
 </section>
-
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>

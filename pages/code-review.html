@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>Sage Bionetworks Developer Handbook - Categories</title>
+        <title>Code Review</title>
         <link rel="stylesheet" href="https://sage-bionetworks.github.io/developer-handbook/theme/css/main.css" />
         <link href="https://sage-bionetworks.github.io/developer-handbook/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Sage Bionetworks Developer Handbook Atom Feed" />
 </head>
@@ -15,7 +15,7 @@
                 <nav><ul>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/branch-protection.html">Branch Protection</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/cicd.html">CICD</a></li>
-                    <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/code-review.html">Code Review</a></li>
+                    <li class="active"><a href="https://sage-bionetworks.github.io/developer-handbook/pages/code-review.html">Code Review</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/development-workflow.html">Development Workflow</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/feature-branches.html">Feature Branches</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/git.html">Git</a></li>
@@ -31,13 +31,24 @@
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/testing.html">Testing</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-
 <section id="content" class="body">
-    <h1>Categories for Sage Bionetworks Developer Handbook</h1>
-    <ul>
-    </ul>
+    <h1 class="entry-title">Code Review</h1>
+    
+    <h2>Create a Pull Request</h2>
+<p>On the web, in your repository you can click on the “Pull Requests” tab and create a new pull request. You will pick your branch on the right and choose to merge it back into main.</p>
+<p>Alternatively, you can use the github cli to create a pull request (PR).
+Write a good description of what you’re trying to achieve in your code change so that reviewers have context. It’s a great idea to link to an existing JIRA or Github issue as well, where the problem may be more fully described and the reviewer will also have the benefit of the comments thread. </p>
+<p>If you have CODEOWNERS added to your repository, a reviewer will automatically be added to your repository. The speed of review turnaround definitely varies, but at Sage we like to review with one or two business days. In addition to any reviewers who were added automatically, you can add additional reviewer(s) who may be subject matter experts or interestsed in a particular fix.</p>
+<h2>How do you do a code review?</h2>
+<p>Google publishes <a href="https://google.github.io/eng-practices/review/">guidelines</a> for the respective responsibilities of reviewers and code authors. If you have never participated in a code review, it is recommended that you read these.</p>
+<p>Some highlights include:</p>
+<blockquote>
+<p>In general, reviewers should favor approving a CL once it is in a state where it definitely improves the overall code health of the system being worked on, even if the CL isn’t perfect.</p>
+<p>...if a CL adds a feature that the reviewer doesn’t want in their system, then the reviewer can certainly deny approval even if the code is well-designed.</p>
+<p>Reviewers should always feel free to leave comments expressing that something could be better, but if it’s not very important, prefix it with something like "Nit:"  to let the author know that it’s just a point of polish that they could choose to ignore.</p>
+</blockquote>
+<p>Sage Bionetworks has an open door meeting where code reviews are sometimes discussed, and a Code Review Github team. Lastly, code reviews MUST adhere to the Sage code of conduct linked above.</p>
 </section>
-
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>

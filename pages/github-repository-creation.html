@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>Sage Bionetworks Developer Handbook - Categories</title>
+        <title>Github Repository Creation</title>
         <link rel="stylesheet" href="https://sage-bionetworks.github.io/developer-handbook/theme/css/main.css" />
         <link href="https://sage-bionetworks.github.io/developer-handbook/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Sage Bionetworks Developer Handbook Atom Feed" />
 </head>
@@ -26,18 +26,50 @@
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/philosophy.html">Philosophy</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/python-conventions.html">Python Conventions</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/r-conventions.html">R Conventions</a></li>
-                    <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/github-repository-creation.html">Github Repository Creation</a></li>
+                    <li class="active"><a href="https://sage-bionetworks.github.io/developer-handbook/pages/github-repository-creation.html">Github Repository Creation</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/github-teams.html">Github Team</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/testing.html">Testing</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-
 <section id="content" class="body">
-    <h1>Categories for Sage Bionetworks Developer Handbook</h1>
-    <ul>
-    </ul>
+    <h1 class="entry-title">Github Repository Creation</h1>
+    
+    <p>At Sage Bionetworks, git is RECOMMENDED for version control and Github RECOMMENDED for storing and sharing code.</p>
+<h2>Naming Conventions</h2>
+<p>There’s a wide variety of styles in naming repositories, but our RECOMMENDED convention is <a href="https://wiki.c2.com/?KebabCase">kebab-case</a>.</p>
+<h2>GitHub Repository Templates</h2>
+<p><em>Status: ok – maybe some links to examples?</em></p>
+<ul>
+<li>Language-agnostic template<ul>
+<li>Readme</li>
+<li>Gitignore (hidden OS files)</li>
+<li>Code of Conduct</li>
+<li>Contribution Guidelines</li>
+<li>Dockerfile (with base alpine/ubuntu?)</li>
+</ul>
+</li>
+<li>Language-specific templates<ul>
+<li>Gitignore (language-specific rules from <a href="https://www.toptal.com/developers/gitignore">gitignore.io</a>)</li>
+<li>Package management files (e.g., Pipfile, renv)</li>
+<li>Language-specific Dockerfile (e.g., python/rocker base image)</li>
+</ul>
+</li>
+</ul>
+<h2>Repository Structure</h2>
+<p>Specific structure will depend on language and purpose, but there are some general guidelines you SHOULD follow:</p>
+<ol>
+<li>Create a README.md file at the project root.</li>
+<li>Create a .gitignore file indicating which files to skip when committing (for example, IDE-specific files and folders).</li>
+<li>Create a CODEOWNERS file, typically placed under a .github directory. This is a file you use to indicate who owns code. This will allow those people to be notified when a pull request is created (see team and branch protection below).</li>
+<li>A CODE_OF_CONDUCT.md file that prescribes what is considered acceptable behavior for participation in open source code. Sage follows the Contributor Covenant code of conduct. You SHOULD link to Sage’s page on this rather than copying content that may change over time.</li>
+</ol>
+<p>Additionally, some practices are RECOMMENDED:</p>
+<ol>
+<li>A CONTRIBUTING.md file that indicates how source code in the repository is developed, how to create a pull request, etc. For advice on developing this, see Github’s <a href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors">guidelines</a>, or some examples from Sage include <a href="https://github.com/Sage-Bionetworks/challenge-registry/blob/main/.github/CONTRIBUTING.md">challenge-registry</a>, <a href="https://github.com/Sage-Bionetworks/synapsemonitor/blob/develop/CONTRIBUTING.md">synapsemonitor</a>, and <a href="https://github.com/Sage-Bionetworks-Workflows/nextflow-infra/blob/main/CONTRIBUTING.md">nextflow-infra</a>.</li>
+<li>A LICENSE.md file that indicates how the code is permitted to be used. The most common license used at Sage Bionetworks is <a href="https://choosealicense.com/licenses/apache-2.0/">Apache 2.0</a>. </li>
+<li>A commit/PR template document to default to. It ensures that every commit/PR has the necessary information to whoever looks at it. This is particularly important for PRs as it informs the reviewers what they’re looking at, the context of the work, etc.</li>
+</ol>
 </section>
-
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>

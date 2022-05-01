@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>Sage Bionetworks Developer Handbook - Categories</title>
+        <title>Containerizing Applications</title>
         <link rel="stylesheet" href="https://sage-bionetworks.github.io/developer-handbook/theme/css/main.css" />
         <link href="https://sage-bionetworks.github.io/developer-handbook/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Sage Bionetworks Developer Handbook Atom Feed" />
 </head>
@@ -31,13 +31,66 @@
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/testing.html">Testing</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-
 <section id="content" class="body">
-    <h1>Categories for Sage Bionetworks Developer Handbook</h1>
+    <h1 class="entry-title">Containerizing Applications</h1>
+    
     <ul>
-    </ul>
+<li>
+<p>this page needs much more work*</p>
+</li>
+<li>
+<p>the <a href="https://github.com/Sage-Bionetworks-IT/ci-examples">ci-examples</a> repository contains github actions workflows for building docker images and pushing to docker hub and ghcr</p>
+</li>
+<li>Some useful Docker base images include:<ul>
+<li>Python</li>
+<li>Alpine/Ubuntu/Slim images</li>
+<li><a href="https://www.r-bloggers.com/2021/05/best-practices-for-r-with-docker/">R: best practices with docker</a></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Base Docker Image</th>
+<th>Use Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://hub.docker.com/_/ubuntu">ubuntu</a></td>
+<td>larger images, but you might want to use this if you're creating a development environment</td>
+</tr>
+<tr>
+<td><a href="https://hub.docker.com/_/alpine">alpine</a></td>
+<td>building a tool for publishing / desiring very smallest possible footprint</td>
+</tr>
+<tr>
+<td><a href="https://hub.docker.com/_/python">python:3.x</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://hub.docker.com/_/python?tab=tags&amp;page=1&amp;name=slim">python:3.x-slim</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/r-hub/r-minimal">rhub/r-minimal</a></td>
+<td>Alpine linux-based R instance, small image size</td>
+</tr>
+<tr>
+<td><a href="https://hub.docker.com/r/rocker/r-base/">rocker/r-base</a></td>
+<td>R instance, usually bleeding edge when it comes to system dependencies</td>
+</tr>
+<tr>
+<td><a href="https://hub.docker.com/r/rocker/r-ubuntu">rocker/r-ubuntu</a></td>
+<td>Long-term support for ubuntu</td>
+</tr>
+<tr>
+<td><a href="https://hub.docker.com/r/rocker/tidyverse">rocker/tidyverse</a></td>
+<td>r-base with tidyverse</td>
+</tr>
+</tbody>
+</table>
 </section>
-
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>

@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>Sage Bionetworks Developer Handbook - Categories</title>
+        <title>Testing</title>
         <link rel="stylesheet" href="https://sage-bionetworks.github.io/developer-handbook/theme/css/main.css" />
         <link href="https://sage-bionetworks.github.io/developer-handbook/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Sage Bionetworks Developer Handbook Atom Feed" />
 </head>
@@ -28,16 +28,47 @@
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/r-conventions.html">R Conventions</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/github-repository-creation.html">Github Repository Creation</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/github-teams.html">Github Team</a></li>
-                    <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/testing.html">Testing</a></li>
+                    <li class="active"><a href="https://sage-bionetworks.github.io/developer-handbook/pages/testing.html">Testing</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-
 <section id="content" class="body">
-    <h1>Categories for Sage Bionetworks Developer Handbook</h1>
-    <ul>
-    </ul>
-</section>
+    <h1 class="entry-title">Testing</h1>
+    
+    <p>There are many ways to test your code. The good news is that you have probably already done it many times – every time you make a change to your script/application then run it, that is testing. This, in particular, is called manual testing.</p>
+<p>Another form of testing is known as automated testing, and this relies on another script to test your code (usually done with a testing framework). You can find recommendations to some testing frameworks below under "Language-Specific Conventions" in the "Package Recommendations" sections.</p>
+<p>There are two kinds of automated testing: unit tests and integrated tests. Unlike integrated tests, which tests multiple functionalities together, a unit test will (ideally) focus on one functionality only, and prove it correct. Unit tests are useful for instances such as when you make a change to the code and the script/application breaks; your testing suite should then help pinpoint where the bug could be.</p>
+<p><em>TODO: insert animated gif here</em></p>
+<figure>
+<img></img>
+<figcaption>Integrated test: will the door stay closed? Unit test: does the lock slider move to the left?  As we can see, the lock slider does slide over as expected, so we know that it isn't the locking component that is the issue - what could be allowing the door to open?!</figcaption>
+</figure>
 
+<p>When writing a unit test, it is best practice (SHOULD?) to name it according to the component it is testing (prefixed by test). It will also be useful to add additional tests that will focus on different behaviors, expected errors, or edge cases, with the name reflecting that check, e.g</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Test</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>def divide(m, n)</code></td>
+<td><code>def test_divide()</code></td>
+<td>Does calling the function divide the two params?</td>
+</tr>
+<tr>
+<td></td>
+<td><code>def test_divide_by_zero_err()</code></td>
+<td>Does dividing by zero result in an error?</td>
+</tr>
+</tbody>
+</table>
+<p>Another good rule-of-thumb is to try and avoid test interdependence if you can; meaning, every test should have its own setup and tear-down. <em>TODO: define setup and tear-down.</em> You should write tests with the assumption that the state will not be maintained between each test. Otherwise, you may get hit with test failures that you did not encounter before (since test runners like to work in whatever order they please).</p>
+<p>Finally, every new feature added to your script/application should include one or more unit tests – try to not save writing all tests for the end (it'll get crazy!). That is, every push to the repository that includes a new feature should also come with at least one unit test.</p>
+<p>And remember: unit tests SHOULD focus on asserting the results and outcomes of the functionality, not the steps on how to get there. If you ever find that setting up a unit test for a particular functionality becomes cumbersome, e.g. it is getting complexingly difficult to set up a method in order to test it, you may want to revisit the design of your code.  In fact, this is one of the greatest things about unit tests – they provide excellent feedback on your approach and design.</p>
+</section>
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>

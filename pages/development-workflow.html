@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>Sage Bionetworks Developer Handbook - Categories</title>
+        <title>Development Workflow</title>
         <link rel="stylesheet" href="https://sage-bionetworks.github.io/developer-handbook/theme/css/main.css" />
         <link href="https://sage-bionetworks.github.io/developer-handbook/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Sage Bionetworks Developer Handbook Atom Feed" />
 </head>
@@ -16,7 +16,7 @@
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/branch-protection.html">Branch Protection</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/cicd.html">CICD</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/code-review.html">Code Review</a></li>
-                    <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/development-workflow.html">Development Workflow</a></li>
+                    <li class="active"><a href="https://sage-bionetworks.github.io/developer-handbook/pages/development-workflow.html">Development Workflow</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/feature-branches.html">Feature Branches</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/git.html">Git</a></li>
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/guidelines-or-requirements.html">Guidelines or Requirements?</a></li>
@@ -31,13 +31,36 @@
                     <li><a href="https://sage-bionetworks.github.io/developer-handbook/pages/testing.html">Testing</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-
 <section id="content" class="body">
-    <h1>Categories for Sage Bionetworks Developer Handbook</h1>
-    <ul>
-    </ul>
+    <h1 class="entry-title">Development Workflow</h1>
+    
+    <h2>Forking versus Providing Write Access</h2>
+<p>Depending on the nature of the project and the team composition, it may be more preferable to fork (clone) repositories, or to work on the same repository using feature branches. ~The convention at Sage is to favor forking.~</p>
+<p><em>TODO: insert a discussion of when it’s preferable to promote forking vs. providing write access to repositories.</em> </p>
+<p><em>TODO: insert Thomas’s forking workflow here</em></p>
+<h2>Version Control Development Style</h2>
+<p>There are two development styles commonly used at Sage: gitflow and trunk-based development.</p>
+<p>This <a href="https://www.toptal.com/software/trunk-based-development-git-flow#development-styles">article</a> provides a heuristic for deciding when to use gitflow vs. trunk-based development, though their reasoning is a bit flawed, in that they take an all-or-nothing approach on trunk-based development, requiring that all the developers on a project have the ability to merge to the default branch. If you remove that assumption, trunk-based development fits far more use cases.</p>
+<p>Learn more about these two development styles:</p>
+<table>
+<thead>
+<tr>
+<th>Gitflow</th>
+<th>Trunk-based</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">Atlassian: Gitflow Workflow</a></td>
+<td><a href="https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development">Atlassian: Trunk-based Development</a></td>
+</tr>
+<tr>
+<td>?</td>
+<td><a href="https://trunkbaseddevelopment.com/5-min-overview/">Trunk-based Development: Five Minute Overview</a></td>
+</tr>
+</tbody>
+</table>
 </section>
-
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>
